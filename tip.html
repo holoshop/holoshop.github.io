@@ -1,80 +1,42 @@
 <!doctype html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HOLO SHOP</title>
-    <style>
-        *{
-            padding:10px;
-            margin:10px;
-        }
-        header
-        {
-            font-size:50px;
-            font-family:"Times New Roman", serif;
-            color:black;
-            text-align:center;
-        }
-        header a
-        {
-            text-decoration:none;
-            color:black;
-        }
-        header li
-        {
-            display:inline;
-            font-size:25px;
-            float:right;
-        }
-        nav
-        {
-            margin:10px;
-        }
-        nav ul
-        {
-            /*float:left;*/
-            list-style:none;
-            text-align:center;
-            border-top:8px solid gray;
-            border-bottom:8px solid gray;
-            padding:20px 0;
-        }
-        nav ul li
-        {
-            font-size:30px;
-            display:inline;
-            padding:0 50px;
-            text-decoration:none;
-            color:black;
-        }
-        nav ul li a
-        {
-            text-decoration:none;
-            color:black;
-        }
-        nav ul li a:hover
-        {
-            text-decoration:none;
-            padding:20 10px;
-            background:black;
-            color:white;
-        }
-        footer
-        {
-            text-align:center;
-        }
-        section
-        {
-            border-bottom: 8px solid gray;
-        }
+    <title>4번 게시판</title>
+	 <link type="text/css" rel="stylesheet" href="style.css">
+    <style type="text/css">
+        /* boardcss_list 에서 사용되는 글 등록 버튼 테이블 크기 */
+        #boardcss_list_add_button_table { width: 100%; margin: 0 auto 15px; /*position: relative; background: #bddcff; font-weight: bold;*/ }
 
+        /* 화면에 보여지는 글 등록 버튼 */
+        #boardcss_list_add_button_table .add_button { cursor: pointer; border: 1px solid #bebebe; position: absolute; right: 30px; top: 600px; width: 85px; padding: 6px 0 6px; text-align: center; font-weight: bold; }
+        #boardcss_list_add_button_table .add_button a { color: #ffffff; }
+
+        /* 글 등록 버튼과 글 목록이 겹치지 않게 만들어준 아무것도 아닌것 */
+        #boardcss_list_add_button_table .boardcss_list_add_button ul { width: 100%; overflow: hidden; height: 10px;}
+
+        /* boardcss_list 에서 사용하는 글 목록 테이블 크기*/
+        .boardcss_list_table { width: 100%; }
+
+        /* 화면에 보여지는 글 목록 테이블 */
+        .list_table { width: 100%; }
+
+        /* 화면에 보여지는 caption */
+        .list_table caption { display: none; }
+
+        /* list_table 에서 사용되는 thead */
+        .list_table thead th { text-align: center; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; padding: 8px 0; background: #faf9fa; }
+
+        /* list_table 에서 사용되는 tbody */
+        .list_table tbody td { text-align: center;  border-bottom: 1px solid #e5e5e5; padding: 5px 0; }
+       
         #free-board{
-         position: relative; left: 27%;
+            position: relative; left: 27%;
         }
 
         #write{float: right;}
 
     </style>
+
 </head>
 <body>
 <header>
@@ -92,46 +54,69 @@
         <li><a href="event.html">EVENT</a></li>
     </ul>
 </nav>
-<section>
-    <div id="free-board">
-        <table id="free-board-list" border="1">
-            <center>
-            <caption>목록</caption>
-            <colgroup>
-                <col style="width:90px;"/>
-                <col style="width:170px;"/>
-                <col style="width:135px;" class=""/>
-                <col style="width:84px;"/>
-            </colgroup>
-            <tr>
-                <th>No</th>
-                <th>Subject</th>
-                <th>Name</th>
-                <th>Date</th>
-            </tr>
-            <tr>
-                <td>확인용</td>
-                <td>확인용</td>
-                <td>확인용</td>
-                <td>확인용</td>
-            </tr>
-            <tr>
-                <td>확인용</td>
-                <td>확인용</td>
-                <td>확인용</td>
-                <td>확인용</td>
-            </tr>
-        </center>
-        </table>
-    </div>
-        <form>
-            <input id="write" type="button" value="글쓰기">
-        </form>
-        <br>
 
-</section>
+<body>
+
+
+
+<!-- 테이블 시작 -->
+<div class="boardcss_list_table">
+    <table class="list_table">
+        <caption>목록</caption>
+        <colgroup>
+            <col width="15%" />
+            <col width="45%" />
+            <col width="20%" />
+            <col width="20%" />
+        </colgroup>
+        <thead>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>이름</th>
+            <th>등록일자</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>4</td>
+            <td>자취Tip 4</td>
+            <td>김현아</td>
+            <td>2012-10-19</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>자취Tip 3</td>
+            <td>조항성</td>
+            <td>2012-10-19</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>자취Tip 2</td>
+            <td>최지혜</td>
+            <td>2012-10-19</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>자취Tip 1</td>
+            <td>남윤경</td>
+            <td>2012-10-19</td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- 등록버튼 시작 -->
+    <div id="boardcss_list_add_button_table">
+        <div class="boardcss_list_add_button">
+            <p class="add_button">등록</p>
+            <ul></ul>
+        </div>
+    </div>
+    <!-- 등록버튼 종료 -->
+</div>
+<!-- 테이블 종료 -->
 <footer>
-    (주)HOLO SHOP
-</footer>
+		<!--<center><img src="ho.png"></center>-->
+		<br>(주) HOLO SHOP 
+  </footer>
 </body>
 </html>
